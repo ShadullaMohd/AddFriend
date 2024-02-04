@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .box{
+            border: 4px solid black;
+            width: 250px;
+            height: 350px;
+            margin-top: 140px;
+            border-radius: 30px;
+        }
+        .box img{
+            width: 80%;
+            margin-left: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        .box h1{
+            margin-left: 40px;
+        }
+        .button{
+            margin-left: 66px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: cyan;
+        }
+        .box h3{
+            margin-left: 80px;
+            color: red;
+        }
+        .remove{
+            margin-left: 23px;
+            padding: 6px 10px;
+            border-radius: 10px;
+            background-color: gainsboro;
+            
+            
+        }
+        .div1{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/05/1080p-beautiful-girl-desktop-wallpapers-download.jpg" alt="">
+        
+            <h1>Angle Priya</h1>
+            <h3>Stranger</h3>
+            <div class="div1">
+            <!-- <button class="remove">Remove</button> -->
+            <button class="button">Add Friend</button>
+            </div>
+
+        
+    </div>
+
+    <script>
+        var stranger = document.querySelector("h3")
+
+        var addFriend = document.querySelector(".button")
+
+        // var remove = document.querySelector(".remove")
+        var flag=0
+
+        addFriend.addEventListener("click", function(){
+            if(flag==0){
+                stranger.innerHTML="Friends"
+                stranger.style.color="green"
+                addFriend.innerHTML="Remove"
+                flag=1
+
+            }
+            else{
+                stranger.innerHTML="Stranger"
+                stranger.style.color="red"
+                addFriend.innerHTML="Add Friend"
+                flag=0
+            }
+        })
+
+        // remove.addEventListener("click", function(){
+        //     stranger.innerHTML="Stranger"
+        //     stranger.style.color="red"
+        // })
+
+    </script>
+</body>
+</html>
